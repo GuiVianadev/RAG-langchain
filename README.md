@@ -35,13 +35,11 @@ rag-langchain/
 │── requirements.txt         # Dependências do projeto
 │── README.md                # Documentação
 │── data/                    # Diretório para PDFs
-│── files/                   # Diretório para armazenar embeddings
+│── store/                   # Diretório para armazenar embeddings
 ├── src/
 │   ├── rag.py               # Lógica de consulta ao banco vetorial
 │   ├── retriever.py         # Configuração do mecanismo de busca
-│   ├── vector_store.py      # Criação e persistência da base vetorial
-│   ├── document_loader.py   # Carregamento e divisão dos documentos
-│   ├── chat.py              # Interface para perguntas e respostas
+│   ├── embeddings.py        # Criação e persistência da base vetorial e divisão do texto em chunks
 ```
 
 ## Como Usar
