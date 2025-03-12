@@ -39,24 +39,6 @@ if chunks:
 else:
     print('Falha ao carregar o PDF.')
 
-
-def criar_embeddings(chunks):
-    embedding_model = OpenAIEmbeddings()
-
-    textos = [doc.page_content for doc in chunks]
-
-    embbedings = embedding_model.embed_documents(textos)
-
-    return embbedings
-
-
-if chunks:
-    response = criar_embeddings(chunks)
-    print("Os embeddings foram criados com sucesso!")
-else:
-    print("Falha ao carregar os chunks")
-
-
 diretorio = "data/store"
 vector_store = Chroma.from_documents(
     documents=chunks,

@@ -25,6 +25,7 @@ Se não souber a resposta, diga que não sabe.
 
 ### RESPOSTA:"""
 )
+
 qa_chain = (
     RunnableMap({
         "context": retriever | RunnablePassthrough(),  # Obtém os documentos relevantes
