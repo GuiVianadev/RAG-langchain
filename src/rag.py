@@ -39,7 +39,3 @@ qa_chain = (
 def ask(question):
     return qa_chain.invoke(question)
 
-# Pergunta do usuário
-user_question = input("User: ")
-answer = ask(user_question)
-print(f"Answer: {answer}")
